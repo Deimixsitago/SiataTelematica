@@ -1,3 +1,2 @@
-Progamas requeridos:
-- flask
-- flask_mysqldb
+flask
+flask_mysqldb
