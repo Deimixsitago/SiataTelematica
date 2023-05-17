@@ -11,12 +11,12 @@ app.config['MYSQL_DB'] = 'users'
 
 mysql = MySQL(app)
 
-# Ruta para la página inicial
+# Página inicial
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# Ruta para el login
+# Inicio de sesión
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -39,7 +39,7 @@ def login():
 
     return render_template('login.html')
 
-# Ruta para el registro
+# Registrar
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -53,7 +53,7 @@ def register():
         mysql.connection.commit()
         cur.close()
 
-        # Redirigir al usuario a la página de login
+        # Redirigir al usuario a inicio de sesión
         return redirect(url_for('login'))
 
     return render_template('register.html')

@@ -30,7 +30,7 @@ services:
     networks:
       mynetwork:
         ipv4_address: 192.168.10.3
-
+        
 container3:
     image: ubuntu
     container_name: container3
