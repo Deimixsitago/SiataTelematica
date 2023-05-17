@@ -29,8 +29,7 @@ def index():
     password = request.args.get('password')
     if password == VALID_PASSWORD:
         return redirect('/dashboard')
-    else:
-        return redirect("https://www.youtube.com/watch?v=mCdA4bJAGGk")
+    
 
 
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')

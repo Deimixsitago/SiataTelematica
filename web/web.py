@@ -58,8 +58,7 @@ def register():
 
     return render_template('register.html')
 
-# Ruta para el dashboard
-### Modificar si se corre dentro de un entorno de nube ###
+# Dashboard
 @app.route('/dashboard')
 def dashboard():
     return redirect('http://localhost:5600/?password=123456')
